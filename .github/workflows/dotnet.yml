@@ -26,3 +26,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Publish
       run: dotnet publish --os win
+    - name: Upload artifact 
+      uses: actions/upload-artifact@v2
+      with:
+        name: build_output
+        path: ./*
